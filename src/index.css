@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #060d1f;
+  color: #e2e8f0;
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(129, 140, 248, 0.2) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(129, 140, 248, 0.2);
+  border-radius: 3px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.contact-name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-grid .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-grid .hero-social {
+    justify-content: center;
+  }
+
+  .hero-grid .hero-badge {
+    margin: 0 auto;
+  }
+
+  .hero-grid .hero-desc {
+    max-width: 100% !important;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cv-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-name-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px #34d399; }
+  50% { opacity: 0.5; box-shadow: 0 0 12px #34d399; }
+}
+
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}

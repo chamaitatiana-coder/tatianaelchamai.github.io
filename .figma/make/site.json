@@ -1,0 +1,10 @@
+{
+  "description": "Showcases a professional portfolio featuring a personal photo, detailed CV with download and view options, and highlights skills and projects for recruiters.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
