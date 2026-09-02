@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import tatianaPhoto from './tatiana.jpg'
+import tatianaCV from './Tatiana-El-Chamai-CV.pdf'
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 
@@ -144,7 +146,7 @@ function ProfilePhoto({ size = "hero" }: { size?: "hero" | "about" }) {
       >
         {/* Tatiana's photo */}
         <img
-          src="/tatiana.jpg"
+ src={tatianaPhoto} 
           alt="Tatiana El Chamai"
           style={{
             width: "100%",
@@ -221,8 +223,8 @@ function Nav({ onViewCV }: { onViewCV: () => void }) {
           </a>
         ))}
         <a
-        href="public\Tatiana El Chamai - Resume.pdf"
-          download
+  href={tatianaCV}
+  download="Tatiana-El-Chamai-CV.pdf"
           style={{
             display: "flex",
             alignItems: "center",
@@ -408,8 +410,8 @@ function Hero({ onViewCV }: { onViewCV: () => void }) {
               View My Work
             </a>
             <a
-                          href="public\Tatiana El Chamai - Resume.pdf"
-              download
+  href={tatianaCV}
+download="Tatiana-El-Chamai-CV.pdf"             
               style={{
                 padding: "0.75rem 1.5rem",
                 borderRadius: "0.625rem",
@@ -519,7 +521,7 @@ function Hero({ onViewCV }: { onViewCV: () => void }) {
     }}
   >
     <img
-      src="/tatiana.jpg"
+src={tatianaPhoto}
       alt="Tatiana El Chamai"
       style={{
         width: "100%",
@@ -634,7 +636,7 @@ function About({ onViewCV }: { onViewCV: () => void }) {
     { value: "Full-Stack", label: "Focus" },
   ]
 const handleViewCV = () => {
-  window.open("/Tatiana-El-Chamai-CV.pdf", "_blank", "noopener,noreferrer");
+  window.open(tatianaCV, "_blank", "noopener,noreferrer");
 };
   return (
     <section id="about" style={{ padding: "7rem 2rem", maxWidth: 1200, margin: "0 auto" }}>
@@ -750,7 +752,7 @@ const handleViewCV = () => {
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
        \
             <a
-              href="/Tatiana-El-Chamai-CV.pdf"
+  href={tatianaCV}
               download
               style={{
                 padding: "0.65rem 1.35rem",
@@ -1248,8 +1250,8 @@ www.linkedin.com/in/tatiana-el-chammaii
 
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               <a
-                href="/Tatiana El Chamai - Resume.pdf"
-                download
+  href={tatianaCV}
+download="Tatiana-El-Chamai-CV.pdf"
                 style={{
                   padding: "0.875rem 1.5rem",
                   borderRadius: "0.625rem",
@@ -1796,11 +1798,12 @@ function PDFViewerModal({ onClose }: { onClose: () => void }) {
         }}
       >
         <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: "#818cf8" }}>
-          Tatiana-El-Chamai-CV.pdf
+            href={tatianaCV}
+
         </div>
         <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
           <a
-            href="/Tatiana-El-Chamai-CV.pdf"
+  href={tatianaCV}
             download
             style={{
               display: "flex",
@@ -1933,7 +1936,7 @@ function PDFViewerModal({ onClose }: { onClose: () => void }) {
               </div>
             </div>
             <a
-              href="/Tatiana-El-Chamai-CV.pdf"
+  href={tatianaCV}
               download
               style={{
                 padding: "0.65rem 1.5rem",
