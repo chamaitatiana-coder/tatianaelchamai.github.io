@@ -1871,7 +1871,7 @@ function PDFViewerModal({ onClose }: { onClose: () => void }) {
         }}
       >
         <object
-          data="/Tatiana-El-Chamai-CV.pdf"
+      data={tatianaCV}
           type="application/pdf"
           style={{ width: "100%", height: "100%" }}
         >
